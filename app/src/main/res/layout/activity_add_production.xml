@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    tools:context=".activity.AddProductionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/etLotNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:hint="Enter lot number"
+                android:inputType="textCapWords"
+                android:padding="8dp"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvSelectArticle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:onClick="selectArticleMethod"
+                android:padding="8dp"
+                android:text="Select Article"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="selectStartDateMethod"
+                android:padding="8dp"
+                android:text="Select start date"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:onClick="selectEndDateMethod"
+                android:padding="8dp"
+                android:text="Select end date"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/bSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:background="@color/colorPrimary"
+                android:onClick="saveButtonMethod"
+                android:padding="8dp"
+                android:text="SAVE"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#dedede" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvSelectColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:onClick="selectColorMethod"
+                android:padding="8dp"
+                android:text="Select Color"
+                android:textSize="16dp" />
+
+            <EditText
+                android:id="@+id/etQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="addArticleVariationMethod"
+                android:src="@drawable/ic_check_accent_24dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvVariation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+
+</ScrollView>
